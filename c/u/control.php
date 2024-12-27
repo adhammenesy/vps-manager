@@ -47,7 +47,7 @@
             Information
         </button>
         <button class="tab-button bg-gray-200 text-gray-800 rounded px-4 py-2 hover:bg-blue-600" onclick="showTab('console')">
-            Console
+            SSH
         </button>
     </div>
 
@@ -60,6 +60,7 @@
                 <button 
                     id="startsystem"
                     class="mt-2 bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600"
+                    onclick="alert('Not Available Now')"
                 >
                     Transfer To Linux
                 </button>
@@ -130,7 +131,7 @@
     </div>
 
     <div id="console" class="tab-content hidden mt-10">
-        <h1 class="text-2xl font-bold text-gray-800">Console</h1>
+        <h1 class="text-2xl font-bold text-gray-800">SSH</h1>
         
         <div class="console container ml-6 mt-10">
             <div class="bg-black text-white p-4" style="height: 750px; overflow-y: auto;">
@@ -212,7 +213,7 @@
 
     async function ExecuteCommand(command, port) {
         const ter = await new Terminal(port).init(command, vps);
-        return ter.reply ? (ter.error ? `<p class="text-red-500">${ter.reply}</p>` : `<p class="text-green-500">${ter.reply.replace("\n", "<br>")}</p>`) : console.log(ter);
+        return ter.reply ? (ter.error ? `<p class="text-red-500">${ter.reply}</p>` : `<p class="text-green-500">${ter.reply.replaceAll("\n", "<br>")}</p>`) : console.log(ter);
     }
 </script>
 </body>
