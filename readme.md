@@ -28,8 +28,6 @@ php -s localhost:3000
 
 - Discord:
 
-* Username: black.dev1
-* Graphicode: https://discord.gg/C2J8nZnucQ
-* Almasa: https://discord.gg/Almasa
+* Username: black.cpp
 
 - Made With ❤️ By Black
